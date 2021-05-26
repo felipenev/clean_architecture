@@ -1,4 +1,4 @@
-package escola;
+package br.com.clean.escola.aluno;
 
 public class CPF {
 
