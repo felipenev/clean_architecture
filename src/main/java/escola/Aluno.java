@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Aluno {
 
-    private String cpf;//identificador unico. Representacao mais proxima possivel no mundo real, do modelo negocial.
+    private CPF cpf;//identificador unico. Representacao mais proxima possivel no mundo real, do modelo negocial.
     private String nome;
 
     private Email email;
     private List<Telefone> telefones = new ArrayList<>();
 
-    public Aluno(String cpf, String nome, Email email) {
+    public Aluno(CPF cpf, String nome, Email email) {
         this.cpf = cpf;
         this.nome = nome;
         this.email = email;
@@ -21,7 +21,7 @@ public class Aluno {
         this.telefones.add(new Telefone(ddd, numero));
     }
 
-    public String getCpf() {
+    public CPF getCpf() {
         return cpf;
     }
 
