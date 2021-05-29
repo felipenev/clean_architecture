@@ -2,6 +2,8 @@ package br.com.clean.escola;
 
 import br.com.clean.escola.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.clean.escola.aplicacao.aluno.matricular.MatricularAlunoDTO;
+import br.com.clean.escola.dominio.PublicadorDeEventos;
+import br.com.clean.escola.dominio.aluno.LogDeAlunoMatriculado;
 import br.com.clean.escola.infra.aluno.RepositorioDeAlunosEmMemoria;
 
 public class MatricularAlunoPorLinhaDeComando {
@@ -17,7 +19,9 @@ public class MatricularAlunoPorLinhaDeComando {
         String cpf = "123.456.789-00";
         String email = "fulano@email.com";
 
-        MatricularAluno matricular = new MatricularAluno(new RepositorioDeAlunosEmMemoria());
+        PublicadorDeEventos publicadorDeEventos =  new PublicadorDeEventos();
+        publicadorDeEventos.adicionar(new LogDeAlunoMatriculado());// publica para varios ou nenhum ouvinte.
+        MatricularAluno matricular = new MatricularAluno(new RepositorioDeAlunosEmMemoria(), publicadorDeEventos);
         matricular.executar(new MatricularAlunoDTO(cpf, nome, email));
     }
 }
