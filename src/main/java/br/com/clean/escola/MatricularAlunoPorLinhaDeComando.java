@@ -1,7 +1,10 @@
-package br.com.clean.escola.academico;
+package br.com.clean.escola;
 
 import br.com.clean.escola.academico.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.clean.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
+import br.com.clean.escola.gamificacao.aplicacao.GeraSeloAlunoNovato;
+import br.com.clean.escola.gamificacao.dominio.selo.RepositorioDeSelos;
+import br.com.clean.escola.gamificacao.infra.selo.RepositorioDeSelosEmMemoria;
 import br.com.clean.escola.shared.dominio.evento.PublicadorDeEventos;
 import br.com.clean.escola.academico.dominio.aluno.LogDeAlunoMatriculado;
 import br.com.clean.escola.academico.infra.aluno.RepositorioDeAlunosEmMemoria;
@@ -19,8 +22,12 @@ public class MatricularAlunoPorLinhaDeComando {
         String cpf = "123.456.789-00";
         String email = "fulano@email.com";
 
+        RepositorioDeSelos repositorioDeSelos = new RepositorioDeSelosEmMemoria();
+
         PublicadorDeEventos publicadorDeEventos =  new PublicadorDeEventos();
+
         publicadorDeEventos.adicionar(new LogDeAlunoMatriculado());// publica para varios ou nenhum ouvinte.
+        publicadorDeEventos.adicionar(new GeraSeloAlunoNovato(repositorioDeSelos));
         MatricularAluno matricular = new MatricularAluno(new RepositorioDeAlunosEmMemoria(), publicadorDeEventos);
         matricular.executar(new MatricularAlunoDTO(cpf, nome, email));
     }
