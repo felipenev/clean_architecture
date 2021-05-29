@@ -1,5 +1,6 @@
 package br.com.clean.escola.academico.dominio.aluno;
 
+import br.com.clean.escola.shared.dominio.CPF;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

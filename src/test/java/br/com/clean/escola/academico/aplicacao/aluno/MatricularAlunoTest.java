@@ -3,12 +3,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import br.com.clean.escola.academico.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.clean.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
-import br.com.clean.escola.academico.dominio.PublicadorDeEventos;
+import br.com.clean.escola.shared.dominio.evento.PublicadorDeEventos;
 import br.com.clean.escola.academico.dominio.aluno.LogDeAlunoMatriculado;
 import org.junit.jupiter.api.Test;
 
 import br.com.clean.escola.academico.dominio.aluno.Aluno;
-import br.com.clean.escola.academico.dominio.aluno.CPF;
+import br.com.clean.escola.shared.dominio.CPF;
 import br.com.clean.escola.academico.infra.aluno.RepositorioDeAlunosEmMemoria;
 
 class MatricularAlunoTest {

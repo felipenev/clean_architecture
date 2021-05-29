@@ -1,6 +1,6 @@
 package br.com.clean.escola.gamificacao.dominio.selo;
 
-import br.com.clean.escola.academico.dominio.aluno.CPF;
+import br.com.clean.escola.shared.dominio.CPF;
 
 public class Selo {
 

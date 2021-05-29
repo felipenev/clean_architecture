@@ -2,7 +2,7 @@ package br.com.clean.escola.academico;
 
 import br.com.clean.escola.academico.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.clean.escola.academico.aplicacao.aluno.matricular.MatricularAlunoDTO;
-import br.com.clean.escola.academico.dominio.PublicadorDeEventos;
+import br.com.clean.escola.shared.dominio.evento.PublicadorDeEventos;
 import br.com.clean.escola.academico.dominio.aluno.LogDeAlunoMatriculado;
 import br.com.clean.escola.academico.infra.aluno.RepositorioDeAlunosEmMemoria;
 

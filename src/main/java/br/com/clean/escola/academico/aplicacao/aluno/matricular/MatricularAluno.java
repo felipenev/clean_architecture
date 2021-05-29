@@ -1,6 +1,6 @@
 package br.com.clean.escola.academico.aplicacao.aluno.matricular;
 
-import br.com.clean.escola.academico.dominio.PublicadorDeEventos;
+import br.com.clean.escola.shared.dominio.evento.PublicadorDeEventos;
 import br.com.clean.escola.academico.dominio.aluno.Aluno;
 import br.com.clean.escola.academico.dominio.aluno.AlunoMatriculado;
 import br.com.clean.escola.academico.dominio.aluno.RepositorioDeAlunos;

@@ -1,6 +1,8 @@
 package br.com.clean.escola.academico.infra.aluno;
 
 import br.com.clean.escola.academico.dominio.aluno.*;
+import br.com.clean.escola.academico.dominio.aluno.Email;
+import br.com.clean.escola.shared.dominio.CPF;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

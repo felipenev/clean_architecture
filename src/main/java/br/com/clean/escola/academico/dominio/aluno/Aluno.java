@@ -1,5 +1,7 @@
 package br.com.clean.escola.academico.dominio.aluno;
 
+import br.com.clean.escola.shared.dominio.CPF;
+
 import java.util.ArrayList;
 import java.util.List;
 
